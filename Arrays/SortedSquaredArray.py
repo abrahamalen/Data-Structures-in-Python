@@ -38,3 +38,23 @@ def sortedSquaredArray(array) :
 			largerValueIdx -= 1
 	
 	return sortedSquares
+
+# This solution is using a temporary variable
+
+def sortedSquaredArray(array) :
+	x = -1
+	a = 0 
+	b = -1
+	sortedSquares = [0 for _ in array]
+	for i in range (len(array)) :
+		if abs(array[a]) >= abs(array[b]):
+			temp = (array[a]) ** 2
+			sortedSquares[x] = temp
+			a += 1
+		else:
+			temp = (array[b]) ** 2
+			sortedSquares[x] = temp
+			b -= 1
+		x=x-1
+			
+        return sortedSquares
