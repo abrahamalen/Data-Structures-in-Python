@@ -18,7 +18,7 @@ def twoNumberSum(array, targetSum) :
 	return []
 
 # 2) Using Hashmap
-*O(n) Time & O(n) Space*
+# O(n) Time & O(n) Space
 
 def twoNumberSum(array, targetSum) :
 	nums = {}
