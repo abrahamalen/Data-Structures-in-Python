@@ -6,7 +6,8 @@
 # Output: Because nums[0] + nums[1] == 9, we return [2, 7].
 
 # Solutions
-# 1) Brute Force method with complexitties  O(n^2) Time & O(1) Space
+# 1) Brute Force method with complexitties  
+#    O(n^2) Time & O(1) Space
   
 def twoNumberSum(array, targetSum) :
 	for i in range(len(array) - 1) :
@@ -18,7 +19,7 @@ def twoNumberSum(array, targetSum) :
 	return []
 
 # 2) Using Hashmap
-# O(n) Time & O(n) Space
+#    O(n) Time & O(n) Space
 
 def twoNumberSum(array, targetSum) :
 	nums = {}
@@ -30,8 +31,8 @@ def twoNumberSum(array, targetSum) :
 			nums[num] = True
 	return []
 
-# Using sorting at the begining and then traverse through the array once
-# O(nlogn) Time & O(1) Space
+# 3) Using sorting at the begining and then traverse through the array once
+#    O(nlogn) Time & O(1) Space
 
 def twoNumberSum(array, targetSum) :
 	array.sort()
