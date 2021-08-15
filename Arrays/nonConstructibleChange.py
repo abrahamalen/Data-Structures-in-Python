@@ -7,6 +7,7 @@
 # Solution
 
 # 1) Using sorting
+# O(nlogn) Time & O(1) Space
 
 def nonConstructibleChange(coins) :
 	coins.sort()
