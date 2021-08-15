@@ -17,3 +17,15 @@ def nonConstructibleChange(coins) :
 			return changeCreated + 1
 		changeCreated += coin
 	return changeCreated + 1
+
+# 2) Using sorting but in another logic
+
+def nonConstructibleChange(coins) :
+	coins.sort()
+	changeCreated = 0
+	for coin in coins :
+		if coin <= changeCreated + 1 :
+			changeCreated += coin
+		elif coin > changeCreated + 1 :
+			break
+	return (changeCreated + 1)
