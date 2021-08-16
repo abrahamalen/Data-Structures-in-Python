@@ -9,3 +9,30 @@
  The results array represents the winner of each of these competitions. Inside the results array, a 1 means that the home team won and a 0 means the away team won.
  The results array is the same length as the competitions array, and the indices in the results array correspond with the indices in the competitions array. 
  """
+ 
+ # Solution
+ # !) Using empty string and a hashmap
+ # O(n) Time & O(k) Space where n -> competitions, k -> no:of teams in the tournament.
+ Home_Team_Won = 1
+
+def tournamentWinner(competitions, results) :
+	currentBestTeam = ""
+	scores = {currentBestTeam: 0}
+	
+	for idx, competition in enumerate(competitions) :
+		result = results[idx]
+		homeTeam, awayTeam = competition
+		
+		winningTeam = homeTeam if result == Home_Team_Won else awayTeam
+		
+		updateScores(winningTeam, 3, scores)
+		
+		if scores[winningTeam] > scores[currentBestTeam] :
+			currentBestTeam = winningTeam
+			
+	return currentBestTeam
+
+def updateScores(team, points, scores) :
+	if team not in scores :
+		scores[team] = 0
+	scores[team] += points
