@@ -19,5 +19,14 @@
 	return seqIdx == len(sequence)
 
 # 2) Using for loop. O(n) Time & O(1) Space
+
+ def isValidSubsequence(array, sequence) :
+	seqIdx = 0
+	for value in array :
+		if seqIdx == len(sequence) :
+			break
+		if sequence[seqIdx] == value :
+			seqIdx += 1
+	return seqIdx == len(sequence)
    
   
