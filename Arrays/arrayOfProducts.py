@@ -5,3 +5,18 @@
 # Sample input -> array = [5, 1, 4, 2] , Output -> [8, 40, 10, 20]
 
 # Solution
+
+# 1) Using Brute force method iterating through nested for loops
+# O(n^2) time & O(n) space complexity
+
+def arrayOfProducts(array) :
+	products = [1 for _ in range(len(array))]
+	
+	for i in range(len(array)) :
+		runningProduct = 1
+		for j in range(len(array)) :
+			if i != j :
+				runningProduct *= array[j]
+		products[i] = runningProduct
+	
+	return products
