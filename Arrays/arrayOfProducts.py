@@ -20,3 +20,26 @@ def arrayOfProducts(array) :
 		products[i] = runningProduct
 	
 	return products
+
+# 2) Using left and right arrays and multiplying those two arrays to get the final output array
+# O(n) time and O(n) space complexity
+
+def arrayOfProducts(array) :
+	products = [1 for _ in range(len(array))]
+	leftProducts = [1 for _ in range(len(array))]
+	rightProducts = [1 for _ in range(len(array))]
+	
+	leftRunningProduct = 1
+	for i in range(len(array)) :
+		leftProducts[i] = leftRunningProduct
+		leftRunningProduct *= array[i]
+	
+	rightRunningProduct = 1
+	for i in reversed(range(len(array))) :
+		rightProducts[i] = rightRunningProduct
+		rightRunningProduct *=  array[i]
+	
+	for i in range(len(array)) :
+		products[i] = leftProducts[i] * rightProducts[i]
+	
+	return products
