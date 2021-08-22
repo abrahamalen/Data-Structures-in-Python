@@ -16,8 +16,8 @@ def smallestDifference(arrayOne, arrayTwo) :
 	arrayTwo.sort()
 	idxOne = 0
 	idxTwo = 0
-	smallest = float("inf")
-	current = float("inf")
+	smallest = float("inf")  # declaring smallest as infinity
+	current = float("inf")   # declaring current as infinity
 	smallestPair = []
 	while idxOne < len(arrayOne) and idxTwo < len(arrayTwo) :
 		firstNum = arrayOne[idxOne]
