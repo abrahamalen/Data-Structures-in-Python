@@ -8,6 +8,11 @@
  Inside of these pairs, we have two strings. The first string is the name of the home team, the second string is the name of the away team. 
  The results array represents the winner of each of these competitions. Inside the results array, a 1 means that the home team won and a 0 means the away team won.
  The results array is the same length as the competitions array, and the indices in the results array correspond with the indices in the competitions array. 
+ 
+ Sample Input
+ competitions = [["HTML", "C#"], ["C#", "Python"], ["Python", "HTML"],]
+ results = [0, 0, 1]
+ Sample Output "Python"
  """
  
  # Solution
