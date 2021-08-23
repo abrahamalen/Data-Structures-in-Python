@@ -1,11 +1,11 @@
-# Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
-# Example
-# Input: nums = [-7,-3,2,3,11]
-# Output: [4,9,9,49,121]
+"""
+Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
+Example
+Input: nums = [-7,-3,2,3,11]
+Output: [4,9,9,49,121]
+"""
 
-# Answer : Solution done in 2 ways 
-
-# The Brute Force way 
+# 1) The Brute Force method
 # O(n(logn)) Time & O(n) Space
 
 def sortedSquareArray(array) :
