@@ -11,7 +11,7 @@
  """
  
  # Solution
- # !) Using empty string and a hashmap
+ # 1) Using empty string and a hashmap
  # O(n) Time & O(k) Space where n -> competitions, k -> no:of teams in the tournament.
  Home_Team_Won = 1
 
