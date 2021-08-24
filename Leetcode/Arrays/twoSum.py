@@ -15,3 +15,14 @@ Example 3:
 Input: nums = [3,3], target = 6
 Output: [0,1]
 """
+# Solution
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        array = {}
+        
+        for i in range(len(nums)):
+            result = target-nums[i]
+            if result in array:
+                return [i, array[result]]
+            else:
+                array[nums[i]] = i
