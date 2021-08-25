@@ -45,3 +45,14 @@ def firstDuplicateValue(array):
 		seen.add(value)
 		
 	return -1
+
+# 3) A more optimal solution with complexities O(n) Time and O(1) Space.
+
+def firstDuplicateValue(array):
+	for value in array:
+		absValue = abs(value)
+		if array[absValue - 1] < 0:
+			return absValue
+		array[absValue - 1] *= -1
+		
+	return -1
