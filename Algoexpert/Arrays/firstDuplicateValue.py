@@ -16,3 +16,19 @@ array = [2, 1, 5, 3, 3, 2, 4]
 Output = 3 // 3 is the first integer that appears more than once.
            // 2 also appears more than once, but the second 2 appears after the second 3.
 """
+
+# Solution
+# 1) Brute Force approach with O(n^2) Time & O(1) Space complexity
+def firstDuplicateValue(array):
+	minimumSecondIndex = len(array)
+	for i in range(len(array)):
+		value = array[i]
+		for j in range(i + 1, len(array)):
+			valueToCompare = array[j]
+			if value == valueToCompare:
+				minimumSecondIndex = min(minimumSecondIndex, j)
+	
+	if minimumSecondIndex == len(array):
+		return -1
+	
+	return array[minimumSecondIndex]
