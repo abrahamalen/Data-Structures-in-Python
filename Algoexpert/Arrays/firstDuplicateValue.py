@@ -19,6 +19,7 @@ Output = 3 // 3 is the first integer that appears more than once.
 
 # Solution
 # 1) Brute Force approach with O(n^2) Time & O(1) Space complexity
+
 def firstDuplicateValue(array):
 	minimumSecondIndex = len(array)
 	for i in range(len(array)):
@@ -32,3 +33,15 @@ def firstDuplicateValue(array):
 		return -1
 	
 	return array[minimumSecondIndex]
+
+# 2) Solution using Set which is more optimal than previous solution.
+#    Complexities O(n) Time & O(n) Space.
+
+def firstDuplicateValue(array):
+	seen = set()
+	for value in array:
+		if value in seen:
+			return value
+		seen.add(value)
+		
+	return -1
