@@ -47,6 +47,7 @@ def firstDuplicateValue(array):
 	return -1
 
 # 3) A more optimal solution with complexities O(n) Time and O(1) Space.
+#    This solution considers the fact that all of the values are inthe range '1 to n' and we are allowed to mutate the input array.
 
 def firstDuplicateValue(array):
 	for value in array:
