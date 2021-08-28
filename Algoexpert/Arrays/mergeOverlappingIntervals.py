@@ -12,3 +12,24 @@ Sample Output
 // Merge the intervals [3, 5], [4, 7] and [6, 8].
 // The intervals could be ordered differently.
 """
+
+# Solution using compare and merge concept
+# O(nlogn) Time and O(n) Space complexities.
+
+def mergeOverlappingIntervals(intervals):
+	sortedIntervals = sorted(intervals, key = lambda x: x[0])
+	mergedIntervals = []
+	currentInterval = sortedIntervals[0]
+	mergedIntervals.append(currentInterval)
+	
+	for nextInterval in sortedIntervals :
+		_ , currentIntervalEnd = currentInterval
+		nextIntervalStart, nextIntervalEnd = nextInterval
+		
+		if currentIntervalEnd >= nextIntervalStart :
+			currentInterval[1] = max(currentIntervalEnd, nextIntervalEnd)
+		else :
+			currentInterval = nextInterval
+			mergedIntervals.append(currentInterval)
+	
+	return mergedIntervals
