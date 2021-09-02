@@ -9,3 +9,5 @@ array = [7, 6, 4, -1, 1, 2]; targetSum = 16
 Sample Output
 [[7, 6, 4, -1], [7, 6, 1, 2]] // the quadruplets could be ordered differently.
 """
+
+# Solution.
