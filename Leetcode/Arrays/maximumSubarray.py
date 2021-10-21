@@ -15,3 +15,14 @@ Example 3:
 Input: nums = [5,4,-1,7,8]
 Output: 23
 """
+
+# Solution
+
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        newNum = maxTotal = nums[0]
+        
+        for i in range(1, len(nums)) :
+            newNum = max(nums[i], nums[i]+newNum)
+            maxTotal = max(newNum, maxTotal)
+        return maxTotal
