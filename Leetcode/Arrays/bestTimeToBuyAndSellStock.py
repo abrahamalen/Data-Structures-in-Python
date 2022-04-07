@@ -14,3 +14,17 @@ Input: prices = [7,6,4,3,1]
 Output: 0
 Explanation: In this case, no transactions are done and the max profit = 0.
 """
+
+# Solution - Brute force  
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        buy = prices[0]
+        profit = 0
+        
+        for i in range(len(prices)):
+            if prices[i] < buy:
+                buy = prices[i]
+            else:
+                profit = max(profit, prices[i] - buy)
+        
+        return profit
